@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1699195297 source:d:\文件及其他\06、編程項目\c_project\nf16_tp\tp03\main.c
+	<stdio.h>
+	<stdlib.h>
+	"tp3.h"
+
+1699178943 d:\文件及其他\06、編程項目\c_project\nf16_tp\tp03\tp3.h
+
+1699196378 source:d:\文件及其他\06、編程項目\c_project\nf16_tp\tp03\tp3.c
+	<stdlib.h>
+	<string.h>
+	"tp3.h"
+
+1699196888 source:d:\program files (x86)\codeblocks\tp\projet\nf16-tp03\tp03\main.c
+	<stdio.h>
+	<stdlib.h>
+	"tp3.h"
+
+1699178944 d:\program files (x86)\codeblocks\tp\projet\nf16-tp03\tp03\tp3.h
+
+1699196380 source:d:\program files (x86)\codeblocks\tp\projet\nf16-tp03\tp03\tp3.c
+	<stdlib.h>
+	<string.h>
+	"tp3.h"
+
