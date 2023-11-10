@@ -1,12 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tp3.h"
-
+#include <string.h>
+#include <time.h>
+#define _CRT_SECURE_NO_WARNINGS
 int main() {
+    struct tm p;
+    time_t nowtime;
+    time(&nowtime);
+    localtime_s(&p,&nowtime);
+    printf("Aujourd'hui\nannee:%04d\ndate:%2d.%02d\n",p.tm_year+1900,p.tm_mon + 1 , p.tm_mday);
     BlockChain ma_chaine_de_blocs = NULL;
-    ma_chaine_de_blocs = ajouterBlock(ma_chaine_de_blocs);
+    long ddate = (p.tm_year+1900)*10000 + (p.tm_mon + 1)*100 + p.tm_mday;
+    char cdate[10];
+    itoa(ddate,cdate,10);
+    printf("%s",cdate);
+    T_Block* pB = ma_chaine_de_blocs;
+    T_Block* tempB = creerBloc(1, cdate);
+    tempB->suivant = ma_chaine_de_blocs;
+
+    ma_chaine_de_blocs = tempB;
     ma_chaine_de_blocs->suivant = NULL;
-    viderBuffer();
+
+    /*scanf("%s", date);
+    //vérifier s'il existe une date identique
+    T_Block* pB = bc;
+    while (pB != NULL) {
+        if (strcmp(date, pB->dateBloc) == 0) {
+            printf("Cette date existe déjà !\n");
+            return bc;
+        }
+        id += 1;//id: le nombre de blocs;
+        pB = pB->suivant;
+    }
+
+    T_Block* tempB = creerBloc(id, date); //créer un nouveau bloc « tempB »
+    tempB->suivant = bc; // attacher le nouveau bloc à la tête de la liste existante
+    printf("Succes !\n");
+    return tempB;*/
+
+
+
+   // viderBuffer();
 
 
 
