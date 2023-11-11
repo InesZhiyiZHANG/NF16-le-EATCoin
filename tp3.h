@@ -60,4 +60,6 @@ int transfert(int idSource, int idDestination, float montant, char* descr, Block
 // UTILS
 void viderBuffer();
 
+void changerdate(char* date_ancien, char* date_now, int update);
+
 #endif // TP3_H_INCLUDED
